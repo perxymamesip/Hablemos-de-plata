@@ -6,6 +6,9 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SplashCursor from '../components/SplashCursor.jsx';
+import Magnet from '../components/Magnet.jsx'
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,6 +97,7 @@ export default function Start() {
   return (
     <div className="relative min-h-screen w-full bg-[#0A0A0A] overflow-hidden">
       {/* Fondo con partículas */}
+      <SplashCursor />
       <div className="absolute inset-0 z-0">
         <Particles
           particleColors={['#FEFEFE']}
@@ -147,13 +151,15 @@ export default function Start() {
                 Este test tiene algo para ti.
               </p>
             </div>
-
+          <Magnet>
             <NavLink
-              to="/next-screen"
-              className="inline-block bg-[#B877FF] text-[#C6FF00] px-8 py-3 rounded-full text-lg font-poppins font-bold italic city-90 transition-all"
-            >
-              CONTINUAR
+              to="/presentacion"
+              className="bg-[#B877FF] font-poppins font-semibold py-2 px-4 rounded-xl mb-10 hover:border hover:border-[#C6FF00] hover:shadow-[inset_0_0_8px_#C6FF00] text-[#C6FF00] transition-all duration-300"
+        >
+        
+              DESCUBRELO AHORA
             </NavLink>
+            </Magnet>
           </div>
         </main>
       </div>
